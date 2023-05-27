@@ -1,3 +1,4 @@
+const api = '71780eded85c0ac817306ce131af193f';
 const iconImg = document.getElementById('weather-icon');
 const loc = document.querySelector('#location');
 const tempC = document.querySelector('.c');
@@ -13,7 +14,7 @@ t = document.getElementById('date');
 window.addEventListener('load', () => {});
 
 
-const api = '71780eded85c0ac817306ce131af193f';
+
 window.addEventListener('load', () => {
     let long;
     let lat;
