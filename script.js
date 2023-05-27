@@ -1,4 +1,4 @@
-const api = '71780eded85c0ac817306ce131af193f';
+
 
 const iconImg = document.getElementById('weather-icon');
 const loc = document.querySelector('#location');
@@ -7,9 +7,15 @@ const tempF = document.querySelector('.f');
 const desc = document.querySelector('.desc');
 const sunriseDOM = document.querySelector('.sunrise');
 const sunsetDOM = document.querySelector('.sunset');
+const date = new Date();
+const t = date.getDate() + " " + date.getMonth() + " " + date.getFullYear();
+t = document.getElementById('date');
 
 
 window.addEventListener('load', () => {});
+
+const api = '71780eded85c0ac817306ce131af193f';
+
 window.addEventListener('load', () => {
     let long;
     let lat;
@@ -38,12 +44,13 @@ window.addEventListener('load', () => {
           // Converting Epoch(Unix) time to GMT
           const sunriseGMT = new Date(sunrise * 1000);
           const sunsetGMT = new Date(sunset * 1000);
+          
 
           iconImg.src = iconUrl;
           loc.textContent = `${place}`;
           desc.textContent = `${description}`;
-          tempC.textContent = `${temp.toFixed(2)} °C`;
-          tempF.textContent = `${fahrenheit.toFixed(2)} °F`;
+          tempC.textContent = `${temp.toFixed(1)} °C`;
+          tempF.textContent = `${fahrenheit.toFixed(1)} °F`;
           sunriseDOM.textContent = `${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;
           sunsetDOM.textContent = `${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
         });
