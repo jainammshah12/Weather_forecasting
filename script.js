@@ -53,7 +53,6 @@ window.addEventListener('load', () => {
           const y = sunsetDOM.textContent.split(',');
           sunsetDOM.textContent = y[1];
           document.getElementById('date').innerHTML = y[0];
-          //tempF.textContent = `${fahrenheit.toFixed(1)} °F`;
         });
     });
   }
