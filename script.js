@@ -6,15 +6,10 @@ const tempF = document.querySelector('.f');
 const desc = document.querySelector('.desc');
 const sunriseDOM = document.querySelector('.sunrise');
 const sunsetDOM = document.querySelector('.sunset');
-const date = new Date();
-const t = date.getDate() + " " + date.getMonth() + " " + date.getFullYear();
-t = document.getElementById('date');
+
 
 
 window.addEventListener('load', () => {});
-
-
-
 window.addEventListener('load', () => {
     let long;
     let lat;
