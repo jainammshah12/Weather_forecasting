@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&family=Ubuntu&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-body{
-    font-family: 'Ubuntu', sans-serif;
+body {
     background: #D7F8FF;
     display: flex;
     flex-direction: column;
@@ -15,8 +15,17 @@ body{
     align-items: center;
     padding: 0px;
     gap: 10px;
-    
+    min-height: 100vh;
+}
 
+.cardWrapper {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .container {
@@ -25,48 +34,41 @@ body{
     justify-content: center;
     align-items: center;
     padding: 80px 32px 24px;
-    gap: 32px;
+    gap: 12px;
     isolation: isolate;
-    position:absolute;
+    width: 100%;
 
-    width: 406px;
-    height: 309px;
-    left: 0px;
-    top: 0px;
+    position: relative;
     background: #FFFFFF;
     border-radius: 32px 32px 12px 12px;
-    margin-top: 152px;
-    margin-left: 553px;
-}  
-    .container img{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0px;
-        gap: 10px;
+}
 
-position: absolute;
-width: 100px;
-height: 100px;
-left: calc(50% - 100px/2 + 0.5px);
-top: -50px;
+.container img {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
 
-background: #DDDDDD;
-border-radius: 500px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 100px/2 + 0.5px);
+    top: -50px;
 
-    }
+    background: #DDDDDD;
+    border-radius: 500px;
 
-  .c{
+}
+
+.c {
     font-weight: 700;
     font-size: 100px;
     line-height: 121px;
     color: #000000;
-  }
+}
 
-  #location {
-    width: 189px;
-    height: 29px;
-    font-family: 'Inter';
+#location {
+    width: 100%;
     font-style: italic;
     font-weight: 400;
     font-size: 24px;
@@ -76,11 +78,9 @@ border-radius: 500px;
 }
 
 .desc {
-    width: 150px;
     height: 39px;
-    text-transform: capitalize; 
-    font-family: 'Inter';
-    font-style: normal; 
+    text-transform: capitalize;
+    font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 39px;
@@ -88,127 +88,119 @@ border-radius: 500px;
     color: #000000;
 }
 
-.date{
-    margin-top: 475px;
-    margin-left: 30px;
+.date {
     display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 12px 32px;
-gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 32px;
 
-width: 406px;
-height: 53px;
+    width: 100%;
 
-background: #FFFFFF;
-border-radius: 12px;
+    background: #FFFFFF;
+    border-radius: 12px;
 }
 
-#date{
+#date {
     width: 179px;
-height: 29px;
+    height: 29px;
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 29px;
-text-align: center;
-color: #146779;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #146779;
 
 }
 
-.info{
+.info {
     display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-margin-left: 30px;
-width: 406px;
-height: 118px;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
 
-border-radius: 0px 0px 32px 32px;
+    border-radius: 0px 0px 32px 32px;
+    overflow: hidden;
 
 }
 
-.info1{
+.info1 {
     display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 20px 32px;
-gap: 10px;
-font-family: 'Inter', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 32px;
+    gap: 10px;
+    height: 100%;
+    width: calc(50% - 6px);
 
-width: 199px;
-height: 118px;
 
-background: #FFFFFF;
-border-radius: 12px;
+    background: #FFFFFF;
+    border-radius: 12px;
 }
-.info1 h4{
-    width: 85px;
+
+.info1 h4 {
+    width: fit-content;
     height: 29px;
     font-weight: 400;
-font-size: 24px;
-line-height: 29px;
-text-align: center;
-
-}
-.sunrise{
-    width: 135px;
-height: 39px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 39px;
-
-text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
 
 }
 
-.info2{
+.sunrise {
+    width: fit-content;
+
+    height: 39px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    text-align: center;
+
+}
+
+.info2 {
     display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 20px 32px;
-gap: 10px;
-font-family: 'Inter', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 32px;
+    gap: 10px;
 
-width: 199px;
-height: 118px;
+    width: calc(50% - 6px);
+    height: 100%;
 
-background: #FFFFFF;
-border-radius: 12px;
+    background: #FFFFFF;
+    border-radius: 12px;
 }
 
-.info2 h4{
-    width: 79px;
-height: 29px;
+.info2 h4 {
+    width: fit-content;
+    height: 29px;
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 29px;
-text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
 
 }
 
-.sunset{
-    width: 131px;
-height: 39px;
+.sunset {
+    width: fit-content;
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 39px;
-text-align: center;
+    height: 39px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
 
 }
