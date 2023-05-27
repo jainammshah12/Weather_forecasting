@@ -27,14 +27,15 @@ body{
     padding: 80px 32px 24px;
     gap: 32px;
     isolation: isolate;
-    position: absolute;
+    position:absolute;
+
     width: 406px;
     height: 309px;
     left: 0px;
     top: 0px;
     background: #FFFFFF;
     border-radius: 32px 32px 12px 12px;
-    margin-top: 252px;
+    margin-top: 152px;
     margin-left: 553px;
 }  
     .container img{
@@ -88,7 +89,7 @@ border-radius: 500px;
 }
 
 .date{
-    margin-top: 573px;
+    margin-top: 475px;
     margin-left: 30px;
     display: flex;
 flex-direction: row;
@@ -115,6 +116,20 @@ font-size: 24px;
 line-height: 29px;
 text-align: center;
 color: #146779;
+
+}
+
+.info{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+margin-left: 30px;
+width: 406px;
+height: 118px;
+
+border-radius: 0px 0px 32px 32px;
 
 }
 
