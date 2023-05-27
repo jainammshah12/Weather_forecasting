@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
           const { sunrise, sunset } = data.sys;
 
           const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-          const fahrenheit = convertToCelsius(temp);
+          //const fahrenheit = convertToCelsius(temp);
 
           // Converting Epoch(Unix) time to GMT
           const sunriseGMT = new Date(sunrise * 1000);
