@@ -5,7 +5,7 @@ const tempC = document.querySelector('.c');
 const desc = document.querySelector('.desc');
 const sunriseDOM = document.querySelector('.sunrise');
 const sunsetDOM = document.querySelector('.sunset');
-const tempF = document.querySelector('.f');
+//const tempF = document.querySelector('.f');
 
 
 
@@ -53,24 +53,9 @@ window.addEventListener('load', () => {
           const y = sunsetDOM.textContent.split(',');
           sunsetDOM.textContent = y[1];
           document.getElementById('date').innerHTML = y[0];
-          tempF.textContent = `${fahrenheit.toFixed(1)} °F`;
+          //tempF.textContent = `${fahrenheit.toFixed(1)} °F`;
         });
     });
   }
 })
 
-function convertToCelsius(tempCelsius) {
-  return (tempCelsius * 9) / 5 + 32;
-}
-function convertToFahrenheit(tempFahrenheit) {
-  return (tempFahrenheit - 32) * (5 / 9);
-}
-
-function toCelsiusFahrenheit(){
-  var t = document.getElementById('ctf').innerHTML;
-  if(t.endsWith('C'))
-    t = convertToCelsius(t);
-  else {
-    document.getElementById('ctf').innerHTML = convertToFahrenheit(tempC);
-  }
-}
