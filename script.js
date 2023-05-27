@@ -2,10 +2,11 @@ const api = '71780eded85c0ac817306ce131af193f';
 const iconImg = document.getElementById('weather-icon');
 const loc = document.querySelector('#location');
 const tempC = document.querySelector('.c');
-const tempF = document.querySelector('.f');
 const desc = document.querySelector('.desc');
 const sunriseDOM = document.querySelector('.sunrise');
 const sunsetDOM = document.querySelector('.sunset');
+const tempF = document.querySelector('.f');
+
 
 
 window.addEventListener('load', () => {
@@ -31,7 +32,7 @@ window.addEventListener('load', () => {
           const { sunrise, sunset } = data.sys;
 
           const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
-          const fahrenheit = (temp * 9) / 5 + 32;
+          const fahrenheit = convertToCelsius(temp);
 
           // Converting Epoch(Unix) time to GMT
           const sunriseGMT = new Date(sunrise * 1000);
@@ -42,7 +43,7 @@ window.addEventListener('load', () => {
           loc.textContent = `${place}`;
           desc.textContent = `${description}`;
           tempC.textContent = `${temp.toFixed(1)} °C`;
-          //tempF.textContent = `${fahrenheit.toFixed(1)} °F`;
+          
           const sunriseTime = sunriseGMT.toLocaleDateString([], {hour: '2-digit', minute: '2-digit'});
 
           sunriseDOM.textContent = `${sunriseTime}`;
@@ -52,8 +53,24 @@ window.addEventListener('load', () => {
           const y = sunsetDOM.textContent.split(',');
           sunsetDOM.textContent = y[1];
           document.getElementById('date').innerHTML = y[0];
-          
+          tempF.textContent = `${fahrenheit.toFixed(1)} °F`;
         });
     });
   }
-});
+})
+
+function convertToCelsius(tempCelsius) {
+  return (tempCelsius * 9) / 5 + 32;
+}
+function convertToFahrenheit(tempFahrenheit) {
+  return (tempFahrenheit - 32) * (5 / 9);
+}
+
+function toCelsiusFahrenheit(){
+  var t = document.getElementById('ctf').innerHTML;
+  if(t.endsWith('C'))
+    t = convertToCelsius(t);
+  else {
+    document.getElementById('ctf').innerHTML = convertToFahrenheit(tempC);
+  }
+}
